@@ -1,5 +1,6 @@
 
-<!--- redirect to https --->
+<!--- redirect to https : unavailable with unpaid heroku accounts --->
+<!---
 <cfif left(cgi.request_url, 5) neq 'https'>
 
 	<cfset newUrl = cgi.request_url/>
@@ -9,6 +10,7 @@
 	<!--- <cfdump var="#newUrl#"/> --->
 	<cflocation url = "#newUrl#" addToken="false" statuscode="301"/>
 </cfif>
+--->
 
 
 
