@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>coldFusion Template</title>
 		<meta name="description" content="description here"/>
-		<link rel="manifest" href="/site.webmanifest"/>
+		<link rel="manifest" href="/manifest.json"/>
 	</head>
 
 	<body>
