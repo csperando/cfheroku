@@ -6,8 +6,7 @@
 	<cfset index = newUrl.find("://")/>
 	<cfset newUrl = "https" & mid(newUrl, index, len(newUrl)-index+1)/>
 
-	<!--- <cfheader name="location" value="#newUrl#"/> --->
-	<cflocation url = "#newUrl#"/>
+	<cflocation url = "#newUrl#" addToken="false" statuscode="301"/>
 </cfif>
 
 
