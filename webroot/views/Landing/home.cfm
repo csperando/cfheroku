@@ -14,4 +14,4 @@
 
 </main>
 
-<cfdump var="#application#"/>
+<!--- <cfdump var="#Session#"/> --->
