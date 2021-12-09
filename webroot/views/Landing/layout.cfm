@@ -1,18 +1,13 @@
 
 <!--- redirect to https --->
-
 <cfif left(cgi.request_url, 5) neq 'https'>
-
-	<cfheader statuscode="301" statustext="Moved permanently">
 
 	<cfset newUrl = cgi.request_url/>
 	<cfset index = newUrl.find("://")/>
 	<cfset newUrl = "https" & mid(newUrl, index, len(newUrl)-index+1)/>
 
-	<cfheader name="location" value="#newUrl#"/>
-
-	<cfabort>
-
+	<!--- <cfheader name="location" value="#newUrl#"/> --->
+	<cflocation url = "#newUrl#"/>
 </cfif>
 
 
