@@ -13,3 +13,5 @@
 	</section>
 
 </main>
+
+<cfdump var="#application#"/>
