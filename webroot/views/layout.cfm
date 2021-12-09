@@ -5,6 +5,7 @@
 	</head>
 
 	<body>
+		<!-- this should not appear -->
 		<cfoutput>
 			#flashMessages()#
 			#includeContent()#
