@@ -4,8 +4,9 @@
 
 	<cfset newUrl = cgi.request_url/>
 	<cfset index = newUrl.find("://")/>
-	<cfset newUrl = "https" & mid(newUrl, index, len(newUrl)-index+1)/>
+	<cfset newUrl = "https://www." & mid(newUrl, index+3, len(newUrl)-index-2)/>
 
+	<!--- <cfdump var="#newUrl#"/> --->
 	<cflocation url = "#newUrl#" addToken="false" statuscode="301"/>
 </cfif>
 
