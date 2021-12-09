@@ -6,7 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>coldFusion Template</title>
 		<meta name="description" content="description here"/>
+
+		<!--- pwa --->
 		<link rel="manifest" href="/manifest.json"/>
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+		<meta name="theme-color" content="#ffffff"/>
 	</head>
 
 	<body>
