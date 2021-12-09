@@ -1,5 +1,6 @@
 
 <!--- redirect to https --->
+<!---
 <cfif left(cgi.server_name,3) neq 'www' or cgi.server_port eq '80'>
 
 	<cfheader statuscode="301" statustext="Moved permanently">
@@ -27,8 +28,11 @@
 	</cfif>
 
 	<cfabort>
-		
+
 </cfif>
+--->
+
+
 
 <!DOCTYPE html>
 
