@@ -1,3 +1,35 @@
+
+<!--- redirect to https --->
+<cfif left(cgi.server_name,3) neq 'www' or cgi.server_port eq '80'>
+
+	<cfheader statuscode="301" statustext="Moved permanently">
+
+	<cfif cgi.query_string eq '' and params.controller neq 'landing'>
+		<cfif left(cgi.server_name,3) neq 'www'>
+			<cfheader name="Location" value="https://www.#cgi.server_name#/#params.controller#/#params.action#">
+		<cfelse>
+			<cfheader name="Location" value="https://#cgi.server_name#/#params.controller#/#params.action#">
+		</cfif>
+
+	<cfelseif cgi.query_string neq '' and params.controller neq 'landing'>
+		<cfif left(cgi.server_name,3) neq 'www'>
+			<cfheader name="Location" value="https://www.#cgi.server_name#/#params.controller#/#params.action#?#cgi.query_string#">
+		<cfelse>
+			<cfheader name="Location" value="https://#cgi.server_name#/#params.controller#/#params.action#?#cgi.query_string#">
+		</cfif>
+
+	<cfelse>
+		<cfif left(cgi.server_name,3) neq 'www'>
+			<cfheader name="Location" value="https://www.#cgi.server_name#">
+		<cfelse>
+			<cfheader name="Location" value="https://#cgi.server_name#">
+		</cfif>
+	</cfif>
+
+	<cfabort>
+		
+</cfif>
+
 <!DOCTYPE html>
 
 <html lang="en">
