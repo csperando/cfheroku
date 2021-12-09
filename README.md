@@ -2,9 +2,7 @@
 
 [View template here](https://coldfusion.herokuapp.com/)
 
-Clone or fork then Deploy!
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/csperando/cfheroku/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 # Local Testing
 
