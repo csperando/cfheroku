@@ -1,36 +1,21 @@
 
 <!--- redirect to https --->
-<!---
-<cfif left(cgi.server_name,3) neq 'www' or cgi.server_port eq '80'>
+
+<cfif left(cgi.request_url, 5) neq 'https'>
 
 	<cfheader statuscode="301" statustext="Moved permanently">
 
-	<cfif cgi.query_string eq '' and params.controller neq 'landing'>
-		<cfif left(cgi.server_name,3) neq 'www'>
-			<cfheader name="Location" value="https://www.#cgi.server_name#/#params.controller#/#params.action#">
-		<cfelse>
-			<cfheader name="Location" value="https://#cgi.server_name#/#params.controller#/#params.action#">
-		</cfif>
+	<cfset newUrl = cgi.request_url/>
+	<cfset index = newUrl.find("://")/>
+	<cfset newUrl = "https" & mid(newUrl, index, len(newUrl)-index+1)/>
 
-	<cfelseif cgi.query_string neq '' and params.controller neq 'landing'>
-		<cfif left(cgi.server_name,3) neq 'www'>
-			<cfheader name="Location" value="https://www.#cgi.server_name#/#params.controller#/#params.action#?#cgi.query_string#">
-		<cfelse>
-			<cfheader name="Location" value="https://#cgi.server_name#/#params.controller#/#params.action#?#cgi.query_string#">
-		</cfif>
-
-	<cfelse>
-		<cfif left(cgi.server_name,3) neq 'www'>
-			<cfheader name="Location" value="https://www.#cgi.server_name#">
-		<cfelse>
-			<cfheader name="Location" value="https://#cgi.server_name#">
-		</cfif>
-	</cfif>
+	<cfheader name="location" value="#newUrl#"/>
 
 	<cfabort>
 
 </cfif>
---->
+
+
 
 
 
