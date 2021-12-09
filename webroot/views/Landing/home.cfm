@@ -5,13 +5,11 @@
 <cfoutput>
 <main>
 
-	<h1 class="title center">Hello!</h1>
-	<h2 class="title center">#dateFormat(Now(), 'mmm d, yy')#</h2>
+	<h1 class="title center">Great Success!</h1>
+	<h2 class="title center">#dateFormat(Now(), 'long')#</h2>
 
 	<section>
-
-		<p class="center">Add additional content here.</p>
-
+		<p class="center">Your lucee app has been deployed!</p>
 	</section>
 
 </main>
