@@ -15,3 +15,5 @@ webroot/WEB-INF/lucee-server
 webroot/testIgnore.txt
 webroot/jre/
 webroot/box.exe
+.DS_Store
+**/.DS_Store
