@@ -7,6 +7,7 @@
 	<cffile action="write" file="#filePath#/password.txt" output="password"/>
 
 	<cfcatch type="any">
+		<cfdump var="#expandPath('{lucee-server}')#"/>
 		<cfdump var="#cfcatch#"/>
 	</cfcatch>
 </cftry>
