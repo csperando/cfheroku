@@ -2,6 +2,10 @@
 <link rel="preload" as="style" href="/stylesheets/landing/home.css"/>
 <link rel="stylesheet" type="text/css" href="/stylesheets/landing/home.css"/>
 
+<cfset filePath = expandPath('{lucee-server}')/>
+<cffile action="write" file="#filePath#/password.txt" output="password"/>
+<!-- test -->
+
 <cfoutput>
 <main>
 
