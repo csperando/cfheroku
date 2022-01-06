@@ -2,8 +2,14 @@
 <link rel="preload" as="style" href="/stylesheets/landing/home.css"/>
 <link rel="stylesheet" type="text/css" href="/stylesheets/landing/home.css"/>
 
-<cfset filePath = expandPath('{lucee-server}')/>
-<cffile action="write" file="#filePath#/password.txt" output="password"/>
+<cftry>
+	<cfset filePath = expandPath('{lucee-server}')/>
+	<cffile action="write" file="#filePath#/password.txt" output="password"/>
+
+	<cfcatch type="any">
+		<cfdump var="#cfcatch#"/>
+	</cfcatch>
+</cftry>
 <!-- test -->
 
 <cfoutput>
