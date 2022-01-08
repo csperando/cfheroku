@@ -9,6 +9,13 @@
         <set type="status">404</set>
     </rule>
 
+    <!-- <rule enabled="true">
+        <note>If the request is for task pages, don't process any further rules</note>
+        <from>^/tasks/(.*)</from>
+        <to>/index.cfm</to>
+        <set type="status">404</set>
+    </rule> -->
+
     <rule enabled="false">
         <note>search engine friendly urls for cf frameworks</note>
         <condition type="request-filename" operator="notfile" />

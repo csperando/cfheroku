@@ -9,7 +9,7 @@
 	<h2 class="title center">#dateFormat(Now(), 'long')#</h2>
 
 	<section>
-		<p class="center">Your lucee app has been deployed!</p>
+		<p class="center">Your lucee cfwheels app has been deployed!</p>
 	</section>
 
 </main>
