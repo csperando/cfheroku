@@ -1,5 +1,5 @@
 
-<h1>Scheduled Tasks</h1>
+<h1>Scheduled Tasks:</h1>
 
 <p><a href="https://docs.lucee.org/reference/tags/schedule.html" target="_blank" rel="noreferrer">Read more here</a></p>
 
@@ -8,5 +8,3 @@
 	returnvariable="taskList"/>
 
 <cfdump var="#taskList#"/>
-
-<cfdump var="#Session#"/>
