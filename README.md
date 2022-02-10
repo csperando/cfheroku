@@ -1,5 +1,7 @@
 # Lucee 5 and CFWheels on Heroku
 
+Originally forked from [Mike Sprague](https://github.com/mikesprague/lucee5-heroku).
+
 [View template here](https://coldfusion.herokuapp.com/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
@@ -7,6 +9,10 @@
 # Local Testing
 
 Command box is used for local testing, but it requires jre which is incompatible with github and heroku. Both should be placed within `webroot`. Make sure the `jre` directory and `box.exe` are ignored by including them within the `.gitignore` file.
+
+## Commandbox
+
+Commandbox can be downloaded [here](https://www.ortussolutions.com/products/commandbox#download). Download the version with JRE, and then run `box.exe`. Once commandbox is up and running simply run `server start` from within the webroot of your local directory.
 
 # Layouts
 
@@ -17,3 +23,8 @@ function config() {
     usesLayout(name="layout", template="layout");
 }
 ```
+
+## Lucee Admin Server
+
+To my knowledge, the Lucee admin is currently not accessible one Heroku site. You will only see the set password page,
+but the directory to set a new password on the Heroku servers is not accessible.
