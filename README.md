@@ -24,7 +24,7 @@ function config() {
 }
 ```
 
-## Lucee Admin Server
+## Issue
 
-To my knowledge, the Lucee admin is currently not accessible one Heroku site. You will only see the set password page,
-but the directory to set a new password on the Heroku servers is not accessible.
+To my knowledge, the Lucee admin is currently not accessible one the Heroku site. You will only see the set password page,
+but the directory to set a new password on the Heroku servers is not accessible. Lucee no longer allows you to set the initial password through the web. Instead a password.txt file must be imported from the `{lucee-server}` directory.
